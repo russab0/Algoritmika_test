@@ -12,10 +12,11 @@ class Length: # Class for refference to lenght value
         self.l = l
 
 
-class Draw:
+class Draw: # Class for drawing
+    # Constant for converting Russian color names to their English analogue
     RUS_ENG_COLOR = {"зеленый": "green",
                      "синий": "blue",
-                     "default": "black"} # Constant for converting Russian color names to their English analogue
+                     "default": "black"} 
 
     def get_eng_color(self, rus): # Function that returns English name of given in Russain color
         if rus in self.RUS_ENG_COLOR: # Color is defined
@@ -39,7 +40,6 @@ class Draw:
 
 def main():
     ts = turtle.getscreen()
-    ts.title = "Drawing figures" # Setting title of window
     number = int(ts.numinput("Фигуры", "Введите количество фигру: 1-6", default=6, minval=1, maxval=6)) # Reading number
     color = ts.textinput("Цвет", "Выберите цвет: синий, зеленый") # Readlng color
 
